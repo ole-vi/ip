@@ -24,11 +24,14 @@
     1. Install node 8
        > curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
        > sudo apt-get install -y nodejs
-    2. Install npm packages called commander and underscore
+    2. Clone this repo then cd into ip directory
+       > git clone https://github.com/snazzybunny/ip.git
+       > cd ip
+    3. Install npm packages called commander and underscore
        > npm install commander
        > npm install underscore
-    3. Test the program by changing hostname to ole
+    4. Test the program by changing hostname to ole
        sudo node cli.js rename ole
-    4. Output should be like:
+    5. Output should be like:
        > pi@raspberrypi:~/ip $ cat /etc/hostname
        > ole
