@@ -87,5 +87,6 @@ case "$1" in
 esac
 EOF
 
+#sudo resize2fs /dev/mmcblk0p2
 chmod +x /etc/init.d/resize2fs_once &&
 update-rc.d resize2fs_once defaults
