@@ -28,10 +28,12 @@
        > git clone https://github.com/snazzybunny/ip.git
        > cd ip
     3. Install npm packages called commander and underscore
-       > npm install commander
-       > npm install underscore
-    4. Test the program by changing hostname to ole
-       sudo node cli.js rename ole
-    5. Output should be like:
+       > sudo npm install commander
+       > sudo npm install underscore
+    4. Figure out hostname of rpi. Output should print raspberrypi by default.
+       > hostname
+    5. Test the program by changing hostname to ole.
+       > sudo node cli.js rename ole
+    6. Output should be like:
        > pi@raspberrypi:~/ip $ cat /etc/hostname
        > ole
