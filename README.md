@@ -1,6 +1,4 @@
-[![Join the chat at https://gitter.im/pirate-sh/ip](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/pirate-sh/ip?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-  Usage: pirateship [options] [command]
+  Usage: node cli.js [options] [command]
 
 
   Commands:
@@ -9,10 +7,11 @@
     rename <hostname>                                         changes Hostname
     adapter <wirelessSSID> <password> <wirelessSecurityType>  [deprecated] connects a adapter to a wifi network
     wifi <ESSID> [password]                                   connects to a wifi network
-    ethernet <ip> <mask> <gateway> <dns>                      configures rpi network interface to a static ip address
+    swifi <ip> <mask> <gateway> <dns>                      configures rpi wifi interface to a static ip address
+
+    sethernet <ip> <mask> <gateway> <dns>                      configures rpi ethernet interface to a static ip address
     expandfs                                                  expands the partition of the RPI image to the maximum of the SDcard
     detectrpi                                                 detects the hardware version of a raspberry pi
-    detectwifi                                                detect chipset of USB-Wifi dongle
     *                                                         temporary catch all
 
   Options:
@@ -20,6 +19,7 @@
     -h, --help  output usage informatio)
 
   Installation:
+    So far this program assumes you can somehow manage to download nodejs 8 and also the npm packages commander and underscore, which are required for this program to run properly. 
     
     1. Install node 8
        > curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
