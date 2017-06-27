@@ -24,10 +24,14 @@
     1. Install node 8
        > curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
        > sudo apt-get install -y nodejs
-    2. Clone this repo then cd into ip directory
+    2. Clone this repo then cd into ip directory to install the npm packages
        > git clone https://github.com/snazzybunny/ip.git
        > cd ip
     3. Install npm packages called commander and underscore
+       > sudo npm install
+
+       or manually install each one    
+
        > sudo npm install commander
        > sudo npm install underscore
     4. Figure out hostname of rpi. Output should print raspberrypi by default.
