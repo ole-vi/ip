@@ -42,12 +42,12 @@ program
   .description('configures rpi wifi interface to a static ip address')
   .action(swifi)
 
-var sethernet = require('./lib/ConfigureEthernet.js')
+var ethernet = require('./lib/ConfigureEthernet.js')
 
 program
-  .command('sethernet <ip> <mask> <gateway> <dns>')
-  .description('configures rpi ethernet interface to a static ip address')
-  .action(sethernet)
+  .command('ethernet <ip> <mask> <gateway> <dns>')
+  .description('configures rpi network interface to a static ip address')
+  .action(ethernet)
 
 var expandfs = require('./lib/ExpandFS.js')
 

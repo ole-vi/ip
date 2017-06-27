@@ -9,7 +9,7 @@
     wifi <ESSID> [password]                                   connects to a wifi network
     swifi <ip> <mask> <gateway> <dns>                      configures rpi wifi interface to a static ip address
 
-    sethernet <ip> <mask> <gateway> <dns>                      configures rpi ethernet interface to a static ip address
+    ethernet <ip> <mask> <gateway> <dns>                      configures rpi network interface to a static ip address
     expandfs                                                  expands the partition of the RPI image to the maximum of the SDcard
     detectrpi                                                 detects the hardware version of a raspberry pi
     *                                                         temporary catch all
@@ -37,3 +37,14 @@
     6. Output should be like:
        > pi@raspberrypi:~/ip $ cat /etc/hostname
        > ole
+
+  Additional Notes:
+
+       wifi - ESSID is the SSID or the network name of your wireless network and password is the password for the corresponding network.
+
+       rename - The hostname is a label assigned to the RPI device for identification on a network and is useful for communication amongst different devices. The default hostname is raspberrypi.
+
+       ethernet and swifi  - before using these command, I checked that my network follows the ip range from 192.168.0.1 to 192.168.0.254.
+       To change my ip address to 192.168.0.251, I can issue the command below given that my router is found at 192.168.0.1 and 
+       that it is also a dns server. Alternatively, you can use Google's dns server, which is 8.8.8.8 or 8.8.4.4.  
+       > ethernet 192.168.0.251 255.255.255.0 192.168.0.1 192.168.0.1 
