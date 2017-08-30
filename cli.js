@@ -49,7 +49,7 @@ program
   .description('configures rpi network interface to a static ip address')
   .action(ethernet)
 
-var hotspot = require('./lib/EnableHotspot.js')
+var hotspot = require('./lib/ConfigureHotspot.js')
 
 program
   .command('hotspot <ESSID> [password]')
