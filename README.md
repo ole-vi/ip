@@ -1,48 +1,30 @@
-  Usage: node cli.js [options] [command]
+```
+Usage: pirateship [options] [command]
 
 
-  Commands:
+Options:
 
-    default                                                   sets a raspbian back to default configuration
-    rename <hostname>                                         changes Hostname
-    adapter <wirelessSSID> <password> <wirelessSecurityType>  [deprecated] connects a adapter to a wifi network
-    wifi <ESSID> [password]                                   connects to a wifi network
-    staticwifi <ip> <mask> <gateway> <dns>                    configures rpi wifi interface to a static ip address
-    hotspot <ESSID> [password]				      turns the rpi into a mobile hotspot
-    ethernet <ip> <mask> <gateway> <dns>                      configures rpi network interface to a static ip address
-    expandfs                                                  expands the partition of the RPI image to the maximum of the SDcard
-    detectrpi                                                 detects the hardware version of a raspberry pi
-    *                                                         temporary catch all
+  -h, --help  output usage information
 
-  Options:
 
-    -h, --help  output usage informatio)
+Commands:
 
-  Installation:
-    So far this program assumes you can somehow manage to download nodejs 8 and also the npm packages commander and underscore, which are required for this program to run properly. 
-    
-    1. Install node 8
-       > curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-       > sudo apt-get install -y nodejs
-    2. Clone this repo then cd into ip directory to install the npm packages
-       > git clone https://github.com/snazzybunny/ip.git
-       > cd ip
-    3. Install npm packages called commander and underscore
-       > sudo npm install
+  default                                                   sets a raspbian back to default configuration
+  rename <hostname>                                         changes Hostname
+  adapter <wirelessSSID> <password> <wirelessSecurityType>  [deprecated] connects a adapter to a wifi network
+  wifi <ESSID> [password]                                   connects to a wifi network
+  staticwifi <ip> <mask> <gateway> <dns>                    configures rpi wifi interface to a static ip address
+  ethernet <ip> <mask> <gateway> <dns>                      configures rpi network interface to a static ip address
+  hotspot <ESSID> [password]                                creates a mobile hotspot
+  expandfs                                                  expands the partition of the RPI image to the maximum of the SDcard
+  detectrpi                                                 detects the hardware version of a raspberry pi
+  version                                                   returns the version of pirateship command
+  docker                                                    loads all images under /root/dockerimages to docker; then the images are removed
+  password <password>                                       change the password for `pi` user
+  *                                                         temporary catch all
+```
 
-       or manually install each one    
-
-       > sudo npm install commander
-       > sudo npm install underscore
-    4. Figure out hostname of rpi. Output should print raspberrypi by default.
-       > hostname
-    5. Test the program by changing hostname to ole.
-       > sudo node cli.js rename ole
-    6. Output should be like:
-       > pi@raspberrypi:~/ip $ cat /etc/hostname
-       > ole
-
-  Additional Notes:
+Additional Notes:
 
     wifi - ESSID is the SSID or the network name of your wireless network and password is the password 
            for the corresponding network.
