@@ -93,7 +93,7 @@ var sshkeyadd = require('./lib/sshkeyadd.js')
 
 program
   .command('sshkeyadd <public_key>')
-  .description('add a public key to pi and root user\'s authorized_keys')
+  .description('add a public key to `pi` and `root` user\'s authorized_keys')
   .action(sshkeyadd)
 
 program
