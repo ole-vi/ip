@@ -78,7 +78,7 @@ program
 //  .action(detectwifi)
 var docker = require('./lib/docker.js')
 program
-  .command('docker')
+  .command('docker [dockerimagezip]')
   .description('loads all images under /root/dockerimages to docker; then the images are removed')
   .action(docker)
 
@@ -88,6 +88,13 @@ program
   .command('password <password>')
   .description('change the password for `pi` user')
   .action(password)
+
+var sshkeyadd = require('./lib/sshkeyadd.js')
+
+program
+  .command('sshkeyadd <public_key>')
+  .description('add a public key to `pi` and `root` user\'s authorized_keys')
+  .action(sshkeyadd)
 
 program
   .command('*')
