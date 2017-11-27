@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 var program = require('commander')
-program.allowUnknownOption(false)
+program.allowUnknownOption(true)
 
 var commands = [{
     command: 'default',
