@@ -11,8 +11,8 @@ Options:
 
 Commands:
 
-  bluetooth <status>                      switches between bluetooth hotspot mode / regular bluetooth and starts the service
-  container <container>                   enables (and start) the desired container
+  bluetooth <on|off>                      switches between bluetooth hotspot mode / regular bluetooth and starts the service
+  container <none|docker|balena>          enables (and start) the desired container
   default                                 sets a raspbian back to default configuration
   detectrpi                               detects the hardware version of a raspberry pi
   ethernet <ip> <mask> <gateway> <dns>    configures rpi network interface to a static ip address
