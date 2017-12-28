@@ -64,12 +64,12 @@ var commands = [{
     action: './lib/sshkeyadd.js'
   },
   {
-    command: 'container <container>',
+    command: 'container <none|docker|balena>',
     description: 'enables (and start) the desired container',
     action: './lib/container.js'
   },
   {
-    command: 'bluetooth <status>',
+    command: 'bluetooth <on|off>',
     description: 'switches between bluetooth hotspot mode / regular bluetooth and starts the service',
     action: './lib/bluetooth.js'
   }
